@@ -4,6 +4,8 @@ function sayingHello() {
 
 export default function dashboard() {
   return <>
-     <h1> this page is for dashboard </h1>
+     <h1> this page is for dashboard 
+      {sayingHello()}
+     </h1>
   </>
 }

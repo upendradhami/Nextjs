@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+:root{
+  --main-color: #3490dc;
+  --secondary-color: #ffed4a;
+  --danger-color: #e3342f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

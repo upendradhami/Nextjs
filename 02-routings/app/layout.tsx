@@ -1,5 +1,5 @@
-import "./globals.css";
 import Link from "next/link";
+import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -9,16 +9,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav style={{ padding: "1rem", background: "#f0f0f0" }}>
-          <div className="flex justify-center items-center m-1 p-2 align-middle">
-            <Link href="/" style={{ marginRight: "1rem" }}>
-              Home
-            </Link>
-            <Link href="/about" style={{ marginRight: "1rem" }}>About</Link>
-            <Link href="/products">Products</Link>
-          </div>
-        </nav>
-        <main style={{ padding: "1rem" }}>{children}</main>
+        <header className=" flex justify-center text-center text-2xl font-bold   m-5 bg-amber-400 p-3">
+          <nav>
+            <Link href="/" className="m-5 p-5 hover:text-blue-600"> Home </Link>
+            <Link href="/dashboard" className="m-5 p-5 hover:text-blue-600"> Dashboard </Link>
+            <Link href="/about" className="m-5 p-5 hover:text-blue-600"> About </Link>
+            <Link href="/products" className="m-5 p-5 hover:text-blue-600"> Product </Link>
+           </nav>
+        </header>
+        {children}
+        <footer className="text-center text-2xl m-5 bg-blue-400 p-30"> Footer Section is here </footer>
       </body>
     </html>
   );

@@ -4,6 +4,6 @@ export default function Notfound() {
         404 - Page Not Found
     </h1>
 
-     <h2>couldn't find your page </h2>
+     <h2> Couldnt find your page </h2>
     </>
 }
