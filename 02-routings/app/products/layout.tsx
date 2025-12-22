@@ -8,6 +8,8 @@ export default function ProductsLayout({children} : {children: React.ReactNode})
    const productid = pathname.split("/")[2];
    const reviewid = pathname.split("/")[4];
 
+
+   
     return (
     <>
      <div className=" m-5">

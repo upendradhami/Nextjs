@@ -1,5 +1,7 @@
 import { nanoid } from 'nanoid'; // Correct import
 
+
+
 export default function ProductPage() {
   const products = ['Product 1', 'Product 2', 'Product 3'];
   
