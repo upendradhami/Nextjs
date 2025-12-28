@@ -2,6 +2,8 @@ import Link from "next/link";
 import "./globals.css";
 
 import {Metadata} from "next";
+import { ErrorWrapper } from "./error-wrapper";
+
 
 export const metadata: Metadata = {
    title : {
@@ -27,9 +29,13 @@ export default function RootLayout({
             <Link href="/about" className="m-5 p-5 hover:text-blue-600"> About </Link>
             <Link href="/products" className="m-5 p-5 hover:text-blue-600"> Product </Link>
             <Link href="/counter" className="m-5 p-5 hover:text-blue-600"> Counter </Link>
+            <Link href="/articles/news-article" className="m-5 p-5 hover:text-blue-600"> Articles </Link>
+            <Link href="/order-product" className="m-5 p-5 hover:text-blue-600"> Order Product </Link>
            </nav>
         </header>
-        {children}
+     <ErrorWrapper>
+     {children}
+     </ErrorWrapper>       
         <footer className="text-center text-2xl m-5 bg-blue-400 p-30"> Footer Section is here </footer>
       </body>
     </html>

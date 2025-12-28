@@ -3,12 +3,13 @@
 import { usePathname } from "next/navigation"
 
 
-export default function notFound() {
+export default function notFoundPage() {
 
   const pathname = usePathname();  // is a array of the path segments i.e products/productid/review/reviewid/not-found
   const productid = pathname.split("/")[2]; 
   const reviewid = pathname.split("/")[4];
-  console.log(pathname)
+  console.log(pathname);
+
     return <>
       <h1 className="text-center font-bold text-3xl text-red-600">
         404 - Review Page Not Found
