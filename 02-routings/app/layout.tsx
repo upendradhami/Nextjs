@@ -30,8 +30,10 @@ export default function RootLayout({
             <Link href="/products" className="m-5 p-5 hover:text-blue-600"> Product </Link>
             <Link href="/counter" className="m-5 p-5 hover:text-blue-600"> Counter </Link>
             <Link href="/articles/news-article" className="m-5 p-5 hover:text-blue-600"> Articles </Link>
+             <Link href="/complex-dashboard" className="m-5 p-5 hover:text-blue-600">complex dashboard</Link>
             <Link href="/order-product" className="m-5 p-5 hover:text-blue-600"> Order Product </Link>
            </nav>
+           
         </header>
      <ErrorWrapper>
      {children}

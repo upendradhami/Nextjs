@@ -1,7 +1,12 @@
 import { Card } from "@/components/card";
 
+
 export default function RevenueCard() {
   return (
-    <Card>Revenue Card</Card>
+    <Card>
+      <div>
+        Revenue Card
+      </div>
+    </Card>
   );
 }
