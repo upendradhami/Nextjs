@@ -1,12 +1,16 @@
+
+
 type LayoutProps = {
   children: React.ReactNode,
   users: React.ReactNode,
   notification: React.ReactNode,
-  revenue: React.ReactNode
+  revenue: React.ReactNode,
+  login: React.ReactNode
 }
-export default function LayoutPage({children,users,notification,revenue
+export default function LayoutPage({children,users,notification,revenue,login
 }: LayoutProps) {
-  return (
+  const isloggedin = false;
+  return (isloggedin) ?  (
     <div>
        <div>{children}</div>
         <div className="flex">
@@ -19,5 +23,8 @@ export default function LayoutPage({children,users,notification,revenue
       
       {}
     </div>
-  );
+  ) :  (<>
+  {login}
+  </>
+ )
 }

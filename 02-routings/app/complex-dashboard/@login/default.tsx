@@ -1,11 +1,11 @@
 import { Card } from "@/components/card";
 
 
-export default function DefaultUserPage() {
+export default function DefaultLoginUser() {
   return (
     <Card>
         <div>
-          Default User Page 
+          Default Login Page
         </div>
     </Card>
   );
