@@ -1,10 +1,21 @@
+import { type NextRequest } from "next/server"; 
 import { comments } from "../data";
 
-export async function GET(_request: Request ,{params} : {params : Promise<{id: string}>}){
-  const {id} = await params;
-  const text = comments.find(cmt => cmt.id === parseInt(id));
-  return Response.json(text)
+export async function GET(request: NextRequest){
+  const searchParams = request.nextUrl.searchParams;
+  const query = searchParams.get("query");
+  const filteredComments = query 
+     ? comments.filter((comnt) => comnt.comment.includes(query)) 
+     :comments;
+
+  return Response.json(filteredComments);
 }
+
+// export async function GET(_request: Request ,{params} : {params : Promise<{id: string}>}){
+//   const {id} = await params;
+//   const text = comments.find(cmt => cmt.id === parseInt(id));
+//   return Response.json(text)
+// }
 
 export async function PATCH(request: Request , 
   {params} : {
